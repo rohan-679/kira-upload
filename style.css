@@ -1,0 +1,1359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap'); 
+
+@font-face{
+    font-family: dharma;
+    src: url('./fonts/Mortend\ -\ Bold.otf')
+}
+@font-face{
+    font-family: dharma2;
+    src: url('./fonts/DharmaGothicE_Bold_R.otf')
+}
+@font-face{
+    font-family: Mortend - Light;
+    src: url('./fonts/Mortend\ -\ Light.ttf');
+}
+@font-face{
+    font-family: Akira;
+    src: url('./fonts/Akira\ Expanded\ Demo.otf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+} 
+body{
+    /* background: black; */
+    overflow-x: hidden;
+    background: black;
+}
+/* navbar  */
+#top_nav{
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 8%;
+    /* height: 122px; */
+}
+#kira-logo{
+    width: 100px;
+    transition: all 0.3s ease;
+}
+#kira-logo:hover{
+    border-bottom: 4px solid red;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.55);
+    font-size: 24px;
+    padding-right: 40px;
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: red;
+    cursor: pointer;
+}
+.container-fluid .navbar-brand img{
+    height: 100px;
+    cursor: pointer;
+}
+.container-fluid .navbar-brand img:hover{
+    border-bottom: 4px solid red;
+}
+@media only screen and (max-width: 1024px){
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 30px;
+        padding: 20px 0px;
+        text-align: center;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover{
+        color: red;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 1500px){
+    .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+        margin-right: 80px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 500px){
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 25px;
+        padding: 20px 0px;
+        text-align: center;
+    }
+    #top_nav{
+        padding: 0 0;
+    }
+    #kira-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+/* navbar  */
+
+/* **********************************************BANNER************************************************ */
+.banner{
+    background: rgba(0, 0, 0, 0.7)url('img/Untitled-2\ 1.png');
+    height: 100vh;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+}
+.banner-content{
+    /* border: 2px solid red; */
+    position: relative;
+    right: 20%;
+}
+.banner-content h1{
+    /* border: 2px solid red; */
+    text-transform: uppercase;
+    font-family: 'dharma2', sans-serif;
+    font-size: 90px;
+}
+.banner-content h1 span{
+    color: red;
+}
+.banner-content input{
+    padding: 10px;
+    font-size: 14px;
+    width: 50%;
+    margin-right: 10px;
+}
+.banner-content button{
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    background: red;
+    box-shadow: 5px 5px 5px rgba(26, 26, 26, 0.75);
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1500px){
+    .banner .banner-content h1{
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .banner-content{
+        right: 0%;
+    }
+}
+@media only screen and (max-width: 580px){
+    .banner-content{
+        right: 0%;
+    }
+    .banner .banner-content h1{
+        font-size: 40px;
+    }
+}
+.box{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.box span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: rotate(45deg);
+    margin: -8px;
+    animation: animate 2s infinite;
+}
+.box span:nth-child(1){
+    animation-delay: -0.2s;
+    transform: rotate(45deg) translate(-20px,-20px);
+}
+.box span:nth-child(2){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+@media only screen and (max-width: 1500px){
+    .box span{
+        width: 20px;
+        height: 20px; 
+    }
+}
+@media only screen and (min-width: 2000px){
+    .box span{
+        width: 40px;
+        height: 40px; 
+    }
+}
+
+
+/* **********************************************BANNER************************************************ */
+
+
+
+
+/* **********************************************HEAD SECTION************************************************ */
+
+/* head container  */
+#head-cnt{
+    /* margin-top: -120px; */
+    background: black;
+    max-width: 100vw;
+    height: 80%;
+    color: white;
+}
+#text-div1{
+    /* border: 2px solid red; */
+    margin-top: 120px;
+}
+#text-div1 h1{
+    /* border: 2px solid red; */
+    font-family: 'dharma', sans-serif;
+    letter-spacing: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#text-div1 h1 span{
+    color: red;
+}
+#text-div4 h1{
+    font-family: 'dharma', sans-serif;
+    letter-spacing: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#text-div2{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    /* border: 2px solid red; */
+}
+#text-div2 p{
+    /* border: 2px solid yellow; */
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+#text-div5 p{
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+#text-div3 h1{
+    font-family: 'dharma', sans-serif;
+    letter-spacing: 0px;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#text-div3 h1 span{
+    color: red;
+}
+@media only screen and (max-width: 1024px){
+    #text-div1 {
+        margin-top: 150px;
+    }
+}
+@media only screen and (max-width: 500px){
+    #text-div1{
+        /* border: 2px solid red; */
+        margin-top: 80px;
+    }
+    #text-div2{
+        margin-top: 30px;
+    }
+    #text-div1 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing: 4px;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 40px;
+    }
+    #text-div4 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing:4px;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    #text-div2 p{
+        font-size: 10px;
+        /* text-transform: uppercase; */
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    #text-div5 p{
+        font-size: 10px;
+        /* text-transform: uppercase; */
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    #text-div3 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing: 3px;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 500px){
+    #text-div1 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing: 4px;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 40px;
+    }
+    #text-div4 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing:4px;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    #text-div2 p{
+        font-size: 14px;
+        /* text-transform: uppercase; */
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    #text-div5 p{
+        font-size: 10px;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    #text-div3 h1{
+        font-family: 'dharma', sans-serif;
+        letter-spacing: 3px;
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+/* head container  */
+
+/* **********************************************HEAD SECTION************************************************ */
+
+
+/* **********************************************CARD SECTION************************************************ */
+
+.main-container{
+    background: rgba(0, 0, 0, 0.6)url('img/Rectangle\ 18.jpg');
+    /* background: #404040; */
+    background-blend-mode: darken;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+    padding: 0px 10px;
+}
+.card1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 376px;
+    height: 406px;
+    margin-top: 70px;
+    margin-right: 20px;
+    background: rgba(0, 0, 0, 0.7)url('img/image\ 56.png');
+    background-blend-mode: darken;
+    background-size: cover;
+    padding: 0px 40px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    overflow: hidden;
+
+}
+.card1 h1{
+    font-family: 'dharma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 32px;
+    /* letter-spacing: 4px; */
+}
+.card1 p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.card1 a{
+    display: inline-block;
+    background: red;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block; 
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 12px;
+    padding: 10px 30px;
+    box-shadow: 5px 8px 10px 6px rgba(0, 0, 0, 0.8);
+    border-radius: 22px;
+    font-family: 'dharma', sans-serif;
+    transition: all 0.3s ease;
+}
+.card1 a:hover{
+    transform: translateY(-10px);
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 451px;
+    height: 485px;
+    margin-top: 50px;
+    margin-right: 20px;
+    /* margin-bottom: 50px; */
+    background: rgba(0, 0, 0, 0.7)url('img/image\ 55.png');
+    background-blend-mode: darken;
+    background-size: cover; 
+    padding: 0px 60px;
+    transition: all 0.3s ease;
+}
+.card2:hover{
+    transform: scale(1.05);
+}
+.card2 h1{
+    font-family: 'dharma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    /* letter-spacing: 4px; */
+}
+.card2 p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.card2 a{
+    background: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block; 
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+    font-size: 12px;
+    padding: 10px 30px;
+    box-shadow: 5px 8px 10px 6px rgba(0, 0, 0, 0.8);
+    border-radius: 22px;
+    font-family: 'dharma', sans-serif;
+    transition: all 0.3s ease;
+}
+.card2 a:hover{
+    transform: translateY(-10px);
+}
+.card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 376px;
+    height: 406px;
+    background: rgba(0, 0, 0, 0.7)url('img/aNj8Hvbrss8.png');
+    background-blend-mode: darken;
+    background-size: cover;
+    padding: 0px 40px;
+    transition: all 0.3s ease;
+}
+.card3:hover{
+    transform: scale(1.05);
+}
+.card3 h1{
+    font-family: 'dharma', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    /* letter-spacing: 4px; */
+}
+.card3 p{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.card3 a{
+    background: red;
+    text-decoration: none;
+    display: block; 
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+    color: white;
+    font-size: 12px;
+    padding: 10px 30px;
+    box-shadow: 5px 8px 10px 6px rgba(0, 0, 0, 0.8);
+    border-radius: 22px;
+    font-family: 'dharma', sans-serif;
+    transition: all 0.3s ease;
+}
+.card3 a:hover{
+    transform: translateY(-10px);
+}
+@media only screen and (min-width: 2150px){
+    .card1 p{
+        font-size: 18px;
+    }
+    .card2 p{
+        font-size: 18px;
+    }
+    .card3 p{
+        font-size: 18px;
+    }
+    .card1 h1{
+        font-size: 28px;
+    }
+    .card2 h1{
+        font-size: 28px;
+    }
+    .card3 h1{
+        font-size: 28px;
+    }
+    .card1{
+        width: 600px;
+        height: 500px;
+        margin-right: 100px;
+    }
+    .card2{
+        width: 600px;
+        height: 550px;
+        margin-right: 100px;
+    }
+    .card3{
+        width: 600px;
+        height: 500px;
+    }
+    .card1 a{
+        margin-top: 80px;
+        font-size: 18px;
+    }
+    .card2 a{
+        font-size: 20px;
+    }
+    .card3 a{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .card2{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    .card1{
+        width: 376px;
+        height: 406px;
+        margin-right: 30px;
+    }
+    .card2{
+        width: 451px;
+        height: 485px;
+        margin-right: 30px;
+    }
+    .card3{
+        width: 376px;
+        height: 406px;
+    }
+    .card1 p{
+        font-size: 14px;
+    }
+    .card2 p{
+        font-size: 14px;
+    }
+    .card3 p{
+        font-size: 14px;
+    }
+    .card1 h1{
+        padding: 0;
+        font-size: 20px;
+    }
+    .card2 h1{
+        font-size: 20px;
+    }
+    .card3 h1{
+        font-size: 20px;
+    }
+    .card1 a{
+        font-size: 14px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .card2 a{
+        font-size: 14px;
+    }
+    .card3 a{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .card1 h1{
+        font-size: 28px;
+    }
+    .card2 h1{
+        font-size: 28px;
+    }
+    .card3 h1{
+        font-size: 28px;
+    }
+    .card1 p{
+        font-size: 18px;
+    }
+    .card2 p{
+        font-size: 18px;
+    }
+    .card3 p{
+        font-size: 18px;
+    }
+    .card1{
+        width: 500px;
+        height: 450px;
+    }
+    .card2{
+        width: 600px;
+        height: 550px;
+    }
+    .card3{
+        width: 500px;
+        height: 450px;
+    }
+    .card1 a{
+        margin-top: 80px;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .card2 a{
+        font-size: 20px;
+    }
+    .card3 a{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .card1{
+        width: 376px;
+        height: 406px;
+    }
+    .card2{
+        width: 451px;
+        height: 485px;
+    }
+    .card3{
+        width: 376px;
+        height: 406px;
+    }
+    .card1{
+        margin-right: 0;
+    }
+    .card2{
+        margin-right: 0;
+    }
+    .card3{
+        margin-right: 0;
+    }
+    .card1 a{
+        margin-top: 50px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .card2 a{
+        font-size: 14px;
+    }
+    .card3 a{
+        font-size: 14px;
+    }
+    .card1 p{
+        font-size: 12px;
+    }
+    .card2 p{
+        font-size: 12px;
+    }
+    .card3 p{
+        font-size: 12px;
+    }
+    .card1 h1{
+        font-size: 20px;
+    }
+    .card2 h1{
+        font-size: 20px;
+    }
+    .card3 h1{
+        font-size: 20px;
+    }
+}
+
+
+
+/* **********************************************CARD SECTION************************************************ */
+
+
+
+
+
+/* **********************************************KIRA COMMUNITY************************************************ */
+.mid-line{
+    width: 100%;
+    height: 4px;
+    background: white;
+}
+.kira-community{
+    background: black;
+    overflow-x: hidden;
+    padding: 10px 0;
+}
+.kira-community h1{
+    color: white;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: 'dharma', sans-serif;
+}
+#scroll-left{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    white-space: nowrap;
+    font-size: 5em;
+    color: white;
+    right: 1000px;
+    z-index: 99;
+    font-family: 'dharma', sans-serif;
+}
+@media only screen and (max-width: 1024px){
+    #scroll-left{
+        font-size: 3em; 
+    }
+}
+@media only screen and (max-width: 580px){
+    #scroll-left{
+        font-size: 2em; 
+    }
+}
+/* **********************************************KIRA COMMUNITY ENDS HERE************************************************ */
+
+
+/* **********************************************NEWS************************************************ */
+.news{
+    background: black;
+    color: white;
+}
+.news.news-heading{
+    padding: 20px;
+    border: 2px solid red;
+}
+.news .news-heading h1{
+    font-size: 200px;
+    text-transform: uppercase;
+    font-family: 'dharma2', sans-serif;
+    /* border: 2px solid red; */
+    display: inline-block;
+    margin-left: 8%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-shadow: -10px 5px 2px red;
+}
+.news .news-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+}
+.news .news-card .news-card-1{
+    background: #151515;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-1:hover{
+    transform: translateY(-10px);
+}
+.news .news-card .news-card-1 p{
+    padding: 30px 0;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+.news .news-card .news-card-1 a{
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    background: red;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-1 a:hover{
+    background: white;
+    color: red;
+}
+.news .news-card .news-card-2{
+    background: #151515;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-2:hover{
+    transform: translateY(-10px);
+}
+.news .news-card .news-card-2 p{
+    padding: 30px 0;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+.news .news-card .news-card-2 a{
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    background: red;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-2 a:hover{
+    background: white;
+    color: red;
+}
+.news .news-card .news-card-3{
+    background: #151515;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-3:hover{
+    transform: translateY(-10px);
+}
+.news .news-card .news-card-3 p{
+    padding: 30px 0;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+.news .news-card .news-card-3 a{
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    background: red;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+.news .news-card .news-card-3 a:hover{
+    background: white;
+    color: red;
+}
+@media only screen and (min-width: 2000px){
+    .news .news-card{
+        justify-content: center;
+    }
+    .news .news-card .news-card-1 img{
+        width: 500px;
+    }
+    .news .news-card .news-card-2 img{
+        width: 500px;
+    }
+    .news .news-card .news-card-3 img{
+        width: 500px;
+    }
+    .news .news-card .news-card-1{
+        margin-right: 150px;
+    }
+    .news .news-card .news-card-2{
+        margin-right: 150px;
+    }
+}
+@media only screen and (max-width: 1500px){
+    .news .news-heading h1{
+        font-size: 100px;
+    }
+    .news .news-card .news-card-1 img{
+        width: 300px;
+    }
+    .news .news-card .news-card-2 img{
+        width: 300px;
+    }
+    .news .news-card .news-card-3 img{
+        width: 300px;
+    }
+    .news .news-card .news-card-1 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-2 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-3 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-1 a{
+        font-size: 20px;
+    }
+    
+    .news .news-card .news-card-2 a{
+        font-size: 20px;
+    }
+    
+    .news .news-card .news-card-3 a{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .news .news-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .news .news-heading h1{
+        font-size: 100px;
+        text-align: center;
+        margin-left: 0%;
+    }
+    .news .news-card .news-card-1{
+        margin-bottom: 50px;
+    }
+    .news .news-card .news-card-2{
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 580px){
+    .news .news-heading h1{
+        font-size: 70px;
+    }
+    .news .news-card .news-card-1 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-2 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-3 p{
+        font-size: 16px;
+    }
+    .news .news-card .news-card-1 a{
+        font-size: 20px;
+    }
+    
+    .news .news-card .news-card-2 a{
+        font-size: 20px;
+    }
+    
+    .news .news-card .news-card-3 a{
+        font-size: 20px;
+    }
+    .news .news-card .news-card-1 img{
+        width: 300px;
+    }
+    .news .news-card .news-card-2 img{
+        width: 300px;
+    }
+    .news .news-card .news-card-3 img{
+        width: 300px;
+    }
+}
+/* **********************************************NEWS ENDS HERE************************************************ */
+
+
+/* **********************************************KIRA SCROLL LEFT************************************************ */
+.kira-scroll-right{
+    background: black;
+    overflow-x: hidden;
+    padding: 10px 0;
+}
+.kira-scroll-right h1{
+    color: white;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: 'dharma', sans-serif;
+}
+#scroll-right{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    white-space: nowrap;
+    font-size: 5em;
+    color: white;
+    left: 1000px;
+    z-index: 99;
+    font-family: 'dharma', sans-serif;
+}
+@media only screen and (max-width: 1024px){
+    #scroll-right{
+        font-size: 3em; 
+    }
+}
+@media only screen and (max-width: 580px){
+    #scroll-right{
+        font-size: 2em; 
+    }
+}
+/* **********************************************KIRA SCROLL LEFT ENDS HERE************************************************ */
+
+
+/* **********************************************INSTAGRAM SECTION************************************************ */
+
+.insta-section {
+    background: #000;
+    padding: 10px;
+}
+.insta-section .insta-heading h1{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: 'dharma2', sans-serif;
+    /* border: 2px solid red; */
+    display: inline-block;
+    margin-left: 8%;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: white;
+    border-bottom: 4px solid red;
+}
+.insta-section .insta-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 100px; */
+}
+.insta-section .insta-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#instafeed-container{
+    /* border: 2px solid red; */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+#instafeed-container img{
+    margin-right: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    transition: all 0.3s ease;
+    /* margin-bottom: 180px; */
+}
+#instafeed-container img:last-child{
+    margin-bottom: 0px;
+}
+#instafeed-container img:hover{
+    transform: scale(1.1);
+}
+@media only screen and (min-width: 2500px){
+    #instafeed-container img{
+        margin: 50px;
+    }
+}
+@media only screen and (min-width: 2360px){
+    #instafeed-container{
+        width: 50vw;
+    }
+}
+@media only screen and (min-width: 2000px){
+    #instafeed-container{
+        width: 70vw;
+    }
+    #instafeed-container img{
+        width: 350px;
+        height: 350px;
+        margin: 10px;
+    }
+}
+@media only screen and (min-width: 1600px){
+    #instafeed-container{
+        width: 80vw;
+    }
+    #instafeed-container img{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    #instafeed-container img{
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        /* margin-bottom: 100px; */
+    }
+} 
+@media only screen and (max-width: 768px){
+    #instafeed-container img{
+        width: 250px;
+        height: 250px;
+        /* margin-bottom: 30px; */
+    }
+    .insta-section .insta-heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .insta-section .insta-heading h1{
+        margin-left: 0;
+    }
+} 
+@media only screen and (max-width: 480px){
+    .insta-section .insta-heading h1{
+        font-size: 50px;
+        margin-left: 0;
+    }
+    #instafeed-container img:last-child{
+        margin-bottom: 20px;
+    }
+    #instafeed-container img{
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin: 0;
+    }
+    #instafeed-container img:last-child {
+        margin-bottom: 0;
+    }
+}
+/* **********************************************INSTAGRAM SECTION ENDS************************************************ */
+
+
+
+/* **********************************************CONTACT US************************************************ */
+#contact{
+    background: #000000;
+    /* margin-top: 50px; */
+}
+#contact-right-inner i{
+    margin-right: 5px;
+}
+#contact-right-inner h1{
+    color: white;
+    display: inline-block;
+    border-bottom: 4px solid red;
+    font-family: 'dharma2', sans-serif;
+    text-transform: uppercase;
+    font-size: 100px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+#contact-left-inner{
+    margin-top: 100px;
+}
+#contact-right-inner p{
+    color: rgb(224, 224, 224);
+    font-family: 'Montserrat', sans-serif;
+}
+#contact-left-inner p{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+
+}
+#contact-left-inner-text1{
+    width: 100%;
+    height: 51px;
+    margin-bottom: 30px;
+    background: #DEDEDE;
+    border: 0;
+    outline: black;
+    padding: 5px 5px 5px 10px;
+}
+#contact-left-inner-text2{
+    width: 100%;
+    height: 51px;
+    margin-bottom: 30px;
+    background: #DEDEDE;
+    border: 0;
+    outline: black;
+    padding: 5px 5px 5px 10px;
+}
+#contact-left-inner-textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+    margin-bottom: 30px;
+    background: #DEDEDE;
+    border: 0;
+    outline: black;
+    padding: 5px 5px 5px 10px;
+}
+#contact-form-btn{
+    height: 38px;
+    width: 142px;
+    left: 943px;
+    top: 2287px;
+    border-radius: 10px;
+    background: #ff0000;
+    box-shadow: 5px 5px 5px rgba(26, 26, 26, 0.75);
+    color: white;
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+#contact-form-btn:hover{
+    transform: translateY(-6px);
+}
+@media only screen and (max-width: 1024px){
+    #contact-right-inner h1{
+        font-size: 60px;
+    }
+}
+@media only screen and (max-width: 480px){
+    #contact-right-inner{
+
+    }
+    #contact-right-inner h1{
+        /* border: 2px solid red; */
+        margin-top: 60px;
+        margin-bottom: 30px;
+        font-size: 50px;
+        text-align: center;
+        margin-left: 70px;
+    }
+    #contact-left-inner{
+        margin-top: 40px;
+    }
+}
+
+/* **********************************************CONTACT US ENDS HERE************************************************ */
+
+
+/* **********************************************FOOTER************************************************ */
+.mid-line-footer{
+    width: 30vw;
+    margin: 100px auto 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.footer{
+    background: rgb(0, 0, 0);
+    padding: 150px 10px 80px 10px;
+}
+.footer .footer-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .footer-content img{
+    width: 110px;
+    /* border: 2px solid red; */
+}
+.footer .footer-content a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    /* border: 2px solid red; */
+}
+.footer .footer-content a:hover{
+    color: red;
+}
+@media only screen and (max-width: 1024px){
+    .footer .footer-content a{
+        font-size: 20px;
+    }
+    .footer .footer-content img{
+        width: 70px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .footer .footer-content a{
+        font-size: 14px;
+        padding-right: 5px;
+    }
+    .mid-line-footer{
+        margin: 50px auto 0 auto;
+    }
+    .footer{
+        padding: 80px 10px 80px 10px;
+    }
+    .mid-line-footer{
+        width: 50vw;
+    }
+}
+
+.end-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.end-line p{
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width: 480px){
+    .end-line p{
+        font-size: 10px;
+    }
+}
+/* **********************************************FOOTER ENDS HERE************************************************ */

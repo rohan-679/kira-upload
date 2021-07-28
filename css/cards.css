@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap'); 
+
+@font-face{
+    font-family: dharma;
+    src: url('../fonts/Mortend\ -\ Bold.otf')
+}
+@font-face{
+    font-family: dharma2;
+    src: url('../fonts/DharmaGothicE_Bold_R.otf')
+}
+@font-face{
+    font-family: Mortend - Light;
+    src: url('../fonts/Mortend\ -\ Light.ttf');
+}
+@font-face{
+    font-family: Akira;
+    src: url('../fonts/Akira\ Expanded\ Demo.otf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+} 
+body{
+    background: black;
+}
+.creator-cards{
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.creator-cards .creator-card-1{
+    background: #077187;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.creator-cards .creator-card-1 h1{
+    text-transform: uppercase;
+    font-size: 70px;
+    font-family: 'dharma', sans-serif;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.creator-cards .creator-card-1 .logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.creator-cards .creator-card-1 .logos img{
+    margin: 0px 100px;
+}
+.creator-cards .creator-card-1 .logos1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.creator-cards .creator-card-1 .logos1 img{
+    margin: 0px 100px;
+}
